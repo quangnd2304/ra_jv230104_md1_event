@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các sự kiện khác</title>
+</head>
+
+<body onload="loadButton()">
+    <input type="text" name="studentId" id="studentId" />
+    <input type="text" name="studentName" id="studentName" />
+    <textarea name="descriptions" id="des" cols="20" rows="5">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem non officiis fugiat eligendi temporibus qui cupiditate! Blanditiis, placeat nobis, ab modi suscipit accusamus tempore provident corrupti distinctio eum iure nihil?
+    </textarea>
+    <script>
+        let studentId = document.getElementById("studentId");
+        // in ra giá trị nhập của ô studentId
+        studentId.addEventListener("change", function () {
+            console.log("Giá trị--->", studentId.value);
+        })
+        let studentName = document.getElementById("studentName");
+        studentName.addEventListener("input", function () {
+            // console.log("Giá trị--->", studentName.value);
+            alert("Giá trị bạn nhập:" + studentName.value);
+        })
+        let des = document.getElementById("des");
+        des.addEventListener("scroll", function () {
+            console.log("Bạn đang scroll");
+        })
+        function resizeWindow() {
+            let widthWindow = window.outerWidth;
+            let heightWindow = window.outerHeight;
+            console.log("Window: Width-" + widthWindow + "-Height-" + heightWindow);
+        }
+        function loadButton() {
+            alert("Button đã được load xong");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Các sự kiện về chuột</title>
+</head>
+
+<body>
+    <button id="btnMouseDown_Up" onmousedown="mousedown()">Mouse Down/Up</button>
+    <button id="btn2">Mouse Over_Out</button>
+    <button id="btn3">Click here</button>
+    <button id="btn4">Double Click</button>
+    <script>
+        // Khi nhấp chuột vào button btnMouseDown_Up thì thực hiện đổi background của button
+        let btnMouseDown = document.getElementById("btnMouseDown_Up");
+
+        function mousedown() {
+            btnMouseDown.style.backgroundColor = "red";
+        }
+        // Khi nhả chuột ra thì background button là màu vàng
+        btnMouseDown.addEventListener("mouseup", function () {
+            btnMouseDown.style.backgroundColor = "yellow";
+        });
+        let btn2 = document.getElementById("btn2");
+        btn2.addEventListener("mouseover", function () {
+            btn2.style.backgroundColor = "blue";
+        });
+        btn2.addEventListener("mouseout", function () {
+            btn2.style.backgroundColor = "violet";
+        });
+        let btn3 = document.getElementById("btn3");
+        btn3.addEventListener("click", function () {
+            alert("Bạn vừa đánh tôi rồi đấy");
+        });
+        let btn4 = document.getElementById("btn4");
+        btn4.addEventListener("dblclick", function () {
+            alert("Bạn vừa double Click");
+        })
+    </script>
+</body>
+
+</html>

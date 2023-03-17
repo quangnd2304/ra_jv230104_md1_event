@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sự kiện bàn phím</title>
+</head>
+
+<body>
+    <button id="btn1">key Down_Up</button>
+    <button id="btn2">Key press</button>
+    <script>
+        let btn1 = document.getElementById("btn1");
+        // keydown: ấn phím xuống, keyup: nhả phím ra
+        // Khi ấn phím xuống, in ra phím vừa ấn
+        btn1.addEventListener("keydown", function (event) {
+            console.log("Phím vừa ấn là: ", event.code);
+        });
+        let btn2 = document.getElementById("btn2");
+        //keypress: giữ phím
+        btn2.addEventListener("keypress", function (event) {
+            console.log("Phím đang giữ là: ", event.keyCode);
+        })
+    </script>
+</body>
+
+</html>
